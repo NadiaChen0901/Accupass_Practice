@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCUPASS 活動通 - 亞洲領先活動社交平台 - 找活動辦活動的首選</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick-1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="0421_reset.css">
+    <link href="./fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(248, 248, 248);
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        /* -----------------------------------navbar------------------------------------------ */
+        .navbar {
+            background-color: #0088d2;
+            width: 100%;
+            height: 48px;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar .container {
+            width: 1080px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .nav-center img {
+            width: 50%;
+            /* margin-left: 50px; */
+        }
+
+        .nav_icon_left {
+            width: 30px;
+            float: left;
+        }
+
+        .taipei {
+            cursor: pointer;
+            color: #fff;
+            font-size: 14px;
+            float: left;
+            display: flex;
+            align-items: center;
+        }
+
+        .taipei i {
+            padding-bottom: 8px;
+        }
+
+        .icon_global {
+            padding-right: 5px;
+        }
+
+        .nav-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .i-md {
+            color: #fff;
+            width: 100%;
+        }
+
+        .nav-right .search {
+            padding: 0 15px;
+            border-right: 2px solid #fff;
+            border-left: 2px solid #fff;
+        }
+
+        .button:hover {
+            color: rgba(255, 255, 255, 0.87);
+            text-decoration: none;
+        }
+
+        .nav-right .button-held {
+            padding: 8px 10px;
+            background-color: #2ab3fc;
+            border-radius: 3px;
+        }
+
+        .button-held:hover {
+            color: rgba(255, 255, 255, 0.87);
+            text-decoration: none;
+            background-color: #1ea7f1;
+        }
+
+        .a-c-f-td {
+            color: #fff;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        /* -----------------------------------navsec------------------------------------------ */
+        .navsec {
+            width: 100%;
+            height: 70px;
+            position: fixed;
+            top: 48px;
+            background-color: #fff;
+            border-bottom: 3px solid #ccc;
+            z-index: 100;
+        }
+
+        .navsec .contanier {
+            max-width: 1080px;
+        }
+
+        .navsec .row {
+            margin-left: 1.5%;
+        }
+
+        .navsec .row img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .links {
+            position: relative;
+            top: 15px;
+            height: 35px;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+        }
+
+        .links:hover {
+            text-decoration: none;
+        }
+
+        .navsec .link-choice {
+            margin: 0;
+            padding: 23px 100px;
+            color: #0088d2;
+            font-weight: 400;
+            border-bottom: 5px solid #0088d2;
+        }
+
+        .navsec .link-study, .link-art,.link-experience   {
+            padding: 20px 100px;
+            color: rgb(167, 167, 167);
+            font-weight: 400;
+        }
+
+        /* -----------------------------------main-------------------------------------------- */
+
+        .row-first {
+            width: 100%;
+            margin-top: 100px;
+            margin-left: 15px;
+        }
+
+        .header {
+            margin-top: 40px;
+            width: 95%;
+        }
+
+        .row-second h1 {
+            font-size: 23px;
+            font-weight: 500;
+            color: #333;
+            padding: 35px 15px;
+        }
+
+        .second h1 {
+            font-size: 23px;
+            font-weight: 500;
+            color: #333;
+            padding: 35px 15px;
+        }
+
+        .second-card {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 25px;
+        }
+
+        .card-list {
+            margin-left: 15px;
+
+        }
+
+        .card-list img {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .cards {
+            background-color: #fff;
+            padding: 15px 20px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .cards i {
+            float: left;
+            color: #aaa;
+            padding-right: 5px;
+        }
+
+        .cards .time {
+            color: #aaa;
+            font-weight: 600;
+            font-size: 12px;
+            padding-bottom: 8px;
+            float: left;
+            line-height: 15px;
+        }
+
+        .cards .title {
+            font-size: 15px;
+            color: #333;
+            font-weight: 500;
+            padding-top: 10px;
+        }
+
+        .cards .tag {
+            font-size: 12px;
+            font-weight: 500;
+            border-top: 1px solid rgb(235, 233, 233);
+            margin-top: 10px;
+            padding-top: 10px;
+            color: rgb(4, 149, 228);
+        }
+
+        .cards a:hover {
+            text-decoration: none;
+        }
+
+        .fivecards {
+            background-color: #fff;
+            padding: 5px 15px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .fivecards a:hover {
+            color: black;
+            text-decoration: none;
+        }
+
+        .fivecards .title {
+            font-size: 15px;
+            color: #333;
+            font-weight: 500;
+            padding-top: 10px;
+        }
+
+        .button-more {
+            color: white;
+            width: 202px;
+            margin: 0 auto;
+            padding: 12px 48px;
+            border-radius: 24px;
+            text-align: center;
+            font-size: 15px;
+            letter-spacing: 2.5px;
+            background-color: #1fb0ff;
+            cursor: pointer;
+        }
+
+        /* -----------------------------------footer------------------------------------------ */
+        footer {
+            width: 100%;
+            /* height: 500px; */
+            background-color: #333;
+            margin-top: 50px;
+            border-top: 4px solid #0088d2;
+        }
+
+        footer .container {
+            padding: 40px 0;
+            padding-left: 20px;
+        }
+
+        h6 {
+            color: #757575;
+            padding-bottom: 20px;
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        .row-top {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #757575;
+        }
+
+        .muted {
+            color: rgba(255, 255, 255, 0.876);
+            padding-bottom: 10px;
+            font-size: 14px;
+            font-weight: 100;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+        }
+
+        .muted:hover {
+            color: #fff;
+
+        }
+
+        .service {
+            color: rgba(255, 255, 255, 0.876);
+            padding-bottom: 10px;
+            font-size: 14px;
+            font-weight: 100;
+            letter-spacing: 0.5px;
+        }
+
+        .helper {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 200;
+            letter-spacing: 1.5px;
+            background-color: #2ab3fc;
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .helper:hover {
+            background-color: #269edf;
+        }
+
+        .row-center {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #757575;
+            padding: 30px 0;
+        }
+
+        .row-center i {
+            width: 40px;
+            height: 40px;
+            background-color: #ccc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            float: left;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .row-center img {
+            margin-right: 3px;
+        }
+
+        .row-bottom {
+            margin-top: -35px;
+        }
+
+        .company-name {
+            color: #757575;
+            font-size: 14px;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar ">
+        <div class="container">
+            <div class="row">
+                <div class="nav-left">
+                    <a href="#"><img class="nav_icon_left pr-2 d-md-flex justify-content-btween"
+                            src="data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 10)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"
+                            alt=""></a>
+                    <div class="taipei">
+                        <img class="pr-1 d-md-flex justify-content-btween" src="./img/icon_global.svg" alt="">
+                        <p class="d-none d-lg-block">&nbsp;台北&nbsp;&nbsp;</p>
+                        <i class="fas fa-sort-down pl-2 d-md-flex justify-content-btween d-none d-lg-block"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-center d-flex align-items-center">
+                <a href="#"><img src="./img/logo.svg" alt=""></a>
+            </div>
+            <div class="nav-right">
+                <span class="search a-c-f-td pr-2 d-none d-lg-block">聆聽寂靜 - 邂逅陽...&nbsp;&nbsp;<i
+                        class="fas fa-search"></i>&nbsp;</span>
+                <i class="i-md fas fa-search d-lg-none d-md-block"></i>
+                <!-- 這個<i>是只有螢幕大小是Medium時才會顯示 -->
+                <a class="button a-c-f-td pr-2 pl-3 d-none  d-lg-block" href=" #">登入</a>
+                <a class="button a-c-f-td pr-2 d-none d-lg-block" href=" #">註冊</a>
+                <a class="button-held a-c-f-td d-none d-lg-block" href=" #">辦活動</a>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <nav class="navsec">
+        <div class="container">
+            <div class="row flex-nowrap">
+                <a class="links" href="">
+                    <div class="link-choice">
+                        <img src="./img/link_choice_wb.png" alt="">&nbsp;&nbsp;精選
+                    </div>
+                </a>
+                <a class="links" href="">
+                    <div class="link-study">
+                        <img src="./img/link_study_wb.png" alt="">&nbsp;&nbsp;學習
+                    </div>
+                </a>
+                <a class="links" href="">
+                    <div class="link-art">
+                        <img src="./img/link_art_wb.png" alt="">&nbsp;&nbsp;藝文
+                    </div>
+                </a>
+                <a class="links" href="">
+                    <div class="link-experience">
+                        <img src="./img/link_experience_wb.png" alt="">&nbsp;&nbsp;體驗
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="row-first d-flex justify-content-center">
+                <a href=""><img class="header" src="./img/header2.jpg" alt=""></a>
+            </div>
+            <div class="row-second">
+                <h1>熱門推薦</h1>
+                <div class="second-card flex-wrap  justify-content-center">
+                    <div class="card-list mb-3" style="width: 340px; ">
+                        <a href=""><img src="./img/eventbanner30.jpg" alt="..."></a>
+                        <div class="cards">
+                            <i class="far fa-clock"></i>
+                            <p class="time">2021-05-04(二) ~ 2021-06-06(日)</p><br>
+                            <a href="">
+                                <p class="title pb-3">The Girl you wanna be — 國際版畫藝術特展</p>
+                            </a>
+                            <a href="">
+                                <p class="tag">#插畫</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-list mb-3" style="width: 340px;">
+                        <a href=""><img src="./img/eventbanner22.jpg" alt="..."></a>
+                        <div class="cards">
+                            <i class="far fa-clock"></i>
+                            <p class="time">2021-06-11(五) ~ 2021-06-14(一)</p><br>
+                            <a href="">
+                                <p class="title">2021愛手創日本手作祭 2021 ISHANDS x Connect Asia Craft Matsuri</p>
+                            </a>
+                            <a href="">
+                                <p class="tag">#COVID-FREE</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-list mb-3" style="width: 340px;">
+                        <a href=""><img src="./img/eventbanner26.jpg" alt="..."></a>
+                        <div class="cards">
+                            <i class="far fa-clock"></i>
+                            <p class="time">2021-05-30(日)</p><br>
+                            <a href="">
+                                <p class="title">日本旅行講座【鳥取市同樂會】艾瑞克&潔西姊姊 Talking SHOW！05/30(日)台北live場</p>
+                            </a>
+                            <a href="">
+                                <p class="tag">#旅遊講座</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-card  flex-wrap justify-content-center">
+                    <div class="card-list mb-3" style="width: 340px;">
+                        <a href=""><img src="./img/eventbanner10.jpg" alt="..."></a>
+                        <div class="cards">
+                            <i class="far fa-clock"></i>
+                            <p class="time">2021-05-14(五) ~ 2021-05-15(六)</p><br>
+                            <a href="">
+                                <p class="title pb-4">拎薄酒來新酒 - 迺南機場夜市</p>
+                            </a>
+                            <p class="tag">&nbsp;&nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="card-list mb-3" style="width: 340px;">
+                        <a href=""><img src="./img/eventbanner20.jpg" alt="..."></a>
+                        <div class="cards">
+                            <i class="far fa-clock"></i>
+                            <p class="time">2021-05-22(六) ~ 2021-05-23(日)</p><br>
+                            <a href="">
+                                <p class="title pb-4">夢想志造所 改變臺灣微行動特展</p>
+                            </a>
+                            <a href="">
+                                <p class="tag">#學習</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-list mb-3" style="width: 340px;">
+                        <a href=""><img src="./img/eventbanner27.jpg" alt="..."></a>
+                        <div class="cards">
+                            <i class="far fa-clock"></i>
+                            <p class="time">2021-05-08(六) ~ 2021-05-30(日)</p><br>
+                            <a href="">
+                                <p class="title pb-4">國際博物館日限定-海洋職人實境解謎</p>
+                            </a>
+                            <a href="">
+                                <p class="tag">#ARG</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-third">
+                <div class="second">
+                    <h1>主辦單位企業服務專區</h1>
+                    <div class="second-card  flex-wrap justify-content-center">
+                        <div class="card-list mb-3" style="width: 340px; ">
+                            <a href=""><img src="./img/company1.jpg" alt="..."></a>
+                            <div class="cards">
+                                <i class="far fa-clock"></i>
+                                <p class="time">2020-09-22(二) ~ 2021-12-31(五)</p><br>
+                                <a href="">
+                                    <p class="title">展會最新科技，解決大量人流簽到與提升活動體驗</p>
+                                </a>
+                                <p class="tag">&nbsp;&nbsp;</p>
+                            </div>
+                        </div>
+                        <div class="card-list mb-3" style="width: 340px; ">
+                            <a href=""><img src="./img/company2.jpg" alt="..."></a>
+                            <div class="cards">
+                                <i class="far fa-clock"></i>
+                                <p class="time">2020-09-22(二) ~ 2021-12-31(五)</p><br>
+                                <a href="">
+                                    <p class="title">讓活動熱賣的精準行銷術：多元廣告曝光方案&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                                </a>
+                                <p class="tag">&nbsp;&nbsp;</p>
+                            </div>
+                        </div>
+                        <div class="card-list" style="width: 340px; ">
+                            <a href=""><img src="./img/company3.jpg" alt="..."></a>
+                            <div class="cards">
+                                <i class="far fa-clock"></i>
+                                <p class="time">2020-06-01(一) ~ 2021-12-31(五)</p><br>
+                                <a href="">
+                                    <p class="title">活動發票代開服務，輕鬆解決手開發票的行政成本</p>
+                                </a>
+                                <p class="tag">&nbsp;&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-forth">
+                <div class="second">
+                    <h1>每天一點新鮮事</h1>
+                    <div class="second-card flex-wrap justify-content-center">
+                        <div class="card-list mr-1 mb-3" style="width: 196px; ">
+                            <a href=""><img src="./img/article8.jpg" alt="..."></a>
+                            <div class="fivecards">
+                                <a href="">
+                                    <p class="title">｜年節活動特輯｜Make a new resolution!2021</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-list mr-0.95 mb-3" style="width: 196px;">
+                            <a href=""><img src="./img/article2.jpg" alt="..."></a>
+                            <div class="fivecards">
+                                <a href="">
+                                    <p class="title">品茶，淺嚐出的不只有清香</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-list mr-0.95 mb-3" style="width: 196px;">
+                            <a href=""><img src="./img/article6.jpg" alt="..."></a>
+                            <div class="fivecards">
+                                <a href="">
+                                    <p class="title">【職涯規劃】想辭職又糾結？從這三個角度思考，</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-list mr-1 mb-3" style="width: 196px; ">
+                            <a href=""><img src="./img/article3.jpg" alt="..."></a>
+                            <div class="fivecards">
+                                <a href="">
+                                    <p class="title">疫情時代的直播錄播策略：一張圖表比較直播與</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-list" style="width: 196px; ">
+                            <a href=""><img src="./img/article7.png" alt="..."></a>
+                            <div class="fivecards">
+                                <a href="">
+                                    <p class="title">辦活動 Checklist：如何製作資訊齊全的活動頁</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fifth">
+                <div class="second">
+                    <h1>精選活動</h1>
+                    <div class="second-card  flex-wrap  justify-content-center">
+                        <div class="card-list mb-3" style="width: 340px; ">
+                            <a href=""><img src="./img/eventbanner19.jpg" alt="..."></a>
+                            <div class="cards">
+                                <i class="far fa-clock"></i>
+                                <p class="time">2021-05-22(六) ~ 2021-05-30(日)</p><br>
+                                <a href="">
+                                    <p class="title">設計人生工作坊｜Designing Your Life Workshop 用設計思考打造你的理想生活</p>
+                                </a>
+                                <a href="">
+                                    <p class="tag">#設計思考</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-list mb-3" style="width: 340px; ">
+                            <a href=""><img src="./img/eventbanner23.jpg" alt="..."></a>
+                            <div class="cards">
+                                <i class="far fa-clock"></i>
+                                <p class="time">2021-05-22(六) ~ 2021-05-23(日)</p><br>
+                                <a href="">
+                                    <p class="title">OPEN! Camping
+                                        夢廣場露營嘉年華</p><br>
+                                </a>
+                                <a href="">
+                                    <p class="tag">#屋頂電影院</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-list mb-3" style="width: 340px; ">
+                            <a href=""><img src="./img/eventbanner21.jpg" alt="..."></a>
+                            <div class="cards">
+                                <i class="far fa-clock"></i>
+                                <p class="time">2021-05-15(六)</p><br>
+                                <a href="">
+                                    <p class="title">【初級班】資深財經媒體人股怪教授謝晨彥帶你入門 從無到有學會投資比特幣</p>
+                                </a>
+                                <a href="">
+                                    <p class="tag">#虛擬貨幣</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-card flex-wrap  justify-content-center">
+                        <div class="card-list mb-3" style="width: 340px; ">
+                            <a href=""><img src="./img/eventbanner4.jpg" alt="..."></a>
+                            <div class="cards">
+                                <i class="far fa-clock"></i>
+                                <p class="time">2021-07-19(一) ~ 2021-07-31(六)</p><br>
+                                <a href="">
+                                    <p class="title">《歌劇的實驗場域》美聲篇製作計畫(〞OPERA Lab〞~ Bel Canto Project)</p>
+                                </a>
+                                <a href="">
+                                    <p class="tag">#Bel Canto</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-list mb-3" style="width: 340px; ">
+                            <a href=""><img src="./img/eventbanner13.jpg" alt="..."></a>
+                            <div class="cards">
+                                <i class="far fa-clock"></i>
+                                <p class="time">2021-05-18(二) </p><br>
+                                <a href="">
+                                    <p class="title">正統拿坡里披薩專業論壇 Neapolitan Pizza Seminar</p>
+                                </a>
+                                <a href="">
+                                    <p class="tag">#經營祕笈</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-list" style="width: 340px; ">
+                            <a href=""><img src="./img/eventbanner31.jpg" alt="..."></a>
+                            <div class="cards">
+                                <i class="far fa-clock"></i>
+                                <p class="time">2021-05-22(六)</p><br>
+                                <a href="">
+                                    <p class="title">新竹親子建築走讀</p><br>
+                                </a>
+                                <a href="">
+                                    <p class="tag">#散策</p>
+                                    <!-- <i class="far fa-eye"></i> -->
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-sixth">
+                <div class="second">
+                    <h1>每天一點新鮮事</h1>
+                    <div class="second-card flex-wrap justify-content-center ">
+                        <div class="card-list mr-1 mb-3" style="width: 196px; ">
+                            <a href=""><img src="./img/article10.png" alt="..."></a>
+                            <div class="fivecards">
+                                <a href="">
+                                    <p class="title">【情緒管理】只要4個小改變，讓手機成為你的心</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-list mr-0.95 mb-3 " style="width: 196px;">
+                            <a href=""><img src="./img/article1.png" alt="..."></a>
+                            <div class="fivecards">
+                                <a href="">
+                                    <p class="title">五大活動攝影指南！2021 尾牙、春酒、家庭</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-list mr-0.95 mb-3 " style="width: 196px;">
+                            <a href=""><img src="./img/article9.jpg" alt="..."></a>
+                            <div class="fivecards">
+                                <a href="">
+                                    <p class="title">【休假症候群】春節來了：休假越休越累？這5</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-list mr-1 mb-3" style="width: 196px; ">
+                            <a href=""><img src="./img/article4.jpg" alt="..."></a>
+                            <div class="fivecards">
+                                <a href="">
+                                    <p class="title">【多重潛能者】興趣很多 = 沒定性？當專家不再是</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-list" style="width: 196px; ">
+                            <a href=""><img src="./img/article5.png" alt="..."></a>
+                            <div class="fivecards">
+                                <a href="">
+                                    <p class="title">【人性時間管理術】5個最有效的方法，竟然是變</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-more">
+                <p>顯示更多活動</p>
+            </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row-top">
+                <div class="col-lg-3 col-12 mb-3">
+                    <h6>舉辦活動</h6>
+                    <ul>
+                        <li class="muted">常見問題</li>
+                        <li class="muted">首次舉辦活動</li>
+                        <li class="muted">活動上架規範</li>
+                        <li class="muted">活動人社群</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-12 mb-4">
+                    <h6>主辦百寶箱</h6>
+                    <ul>
+                        <li class="muted">生活誌</li>
+                        <li class="muted">待開發票服務</li>
+                        <li class="muted">廣告曝光方案</li>
+                        <li class="muted">自助報到機</li>
+                        <li class="muted">Accupai 雲攝影</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-12 mb-3">
+                    <h6>認識我們</h6>
+                    <ul>
+                        <li class="muted">加入我們</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-12 mb-4">
+                    <h6>客服中心</h6>
+                    <ul>
+                        <li class="service">Email: service@accupass.com</li>
+                        <li class="service">週至一週五 10:00-18:30</li>
+                        <li class="helper">詢問小幫手</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row-center mb-5">
+                <div class="col-lg-3 col-12 mb-3">
+                    <h6>聯絡我們</h6>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-line"></i>
+                    <i class="fab fa-blogger-b"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div class="col-lg-3 col-12 mb-3">
+                    <h6>下載 ACCUPASS App</h6>
+                    <a href="">
+                    <img src="./img/googlepay.png" alt="">
+                    <img src="./img/appstore.png" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-12"></div>
+                <div class="col-lg-3 col-12">
+                    <h6>語言</h6>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle text-dark bg-white w-100 text-align-left"
+                            type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            繁體中文
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">English</a>
+                            <a class="dropdown-item" href="#">繁體中文</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-bottom">
+                <p class="company-name">盈科泛利股份有限公司 © Accuvally Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick-1.8.1/slick-1.8.1/slick/slick.min.js"></script>
+
+
+</body>
+
+</html>

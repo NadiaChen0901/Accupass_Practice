@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCUPASS 活動通 - 亞洲領先活動社交平台 - 找活動辦活動的首選</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick-1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="0421_reset.css">
+    <link href="./fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+         body {
+            margin: 0;
+            background-color: rgb(248, 248, 248);
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        /* -----------------------------------navbar------------------------------------------ */
+        .navbar {
+            background-color: #0088d2;
+            width: 100%;
+            height: 48px;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar .container {
+            width: 1080px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .nav-center img {
+            width: 50%;
+            /* margin-left: 50px; */
+        }
+
+        .nav_icon_left {
+            width: 30px;
+            float: left;
+        }
+
+        .taipei {
+            cursor: pointer;
+            color: #fff;
+            font-size: 14px;
+            float: left;
+            display: flex;
+            align-items: center;
+        }
+
+        .taipei i {
+            padding-bottom: 8px;
+        }
+
+        .icon_global {
+            padding-right: 5px;
+        }
+
+        .nav-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .i-md {
+            color: #fff;
+            width: 100%;
+        }
+
+        .nav-right .search {
+            padding: 0 15px;
+            border-right: 2px solid #fff;
+            border-left: 2px solid #fff;
+        }
+
+        .button:hover {
+            color: rgba(255, 255, 255, 0.87);
+            text-decoration: none;
+        }
+
+        .nav-right .button-held {
+            padding: 8px 10px;
+            background-color: #2ab3fc;
+            border-radius: 3px;
+        }
+
+        .button-held:hover {
+            color: rgba(255, 255, 255, 0.87);
+            text-decoration: none;
+            background-color: #1ea7f1;
+        }
+
+        .a-c-f-td {
+            color: #fff;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        /* -----------------------------------navsec------------------------------------------ */
+            .navsec {
+            width: 100%;
+            height: 70px;
+            position: fixed;
+            top: 48px;
+            background-color: #fff;
+            border-bottom: 3px solid #ccc;
+            z-index: 100;
+        }
+
+        .navsec .contanier {
+            max-width: 1080px;
+        }
+
+        .navsec .row {
+            margin-left: 1.5%;
+        }
+
+        .navsec .row img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .links {
+            position: relative;
+            top: 15px;
+            height: 35px;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+        }
+
+        .links:hover {
+            text-decoration: none;
+        }
+
+        .navsec .link-choice {
+            margin: 0;
+            padding: 15px 100px;
+            color: #0088d2;
+            font-weight: 400;
+            border-bottom: 5px solid #0088d2;
+        }
+
+        .navsec .link-study, .link-art,.link-experience   {
+            padding: 10px 100px;
+            color: rgb(167, 167, 167);
+            font-weight: 400;
+        }
+        .navsec-sm .linkss {
+            color: rgb(167, 167, 167);
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar ">
+        <div class="container">
+            <div class="row">
+                <div class="nav-left">
+                    <a href="#"><img class="nav_icon_left pr-2 d-md-flex justify-content-btween"
+                            src="data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 10)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"
+                            alt=""></a>
+                    <div class="taipei">
+                        <img class="pr-1 d-md-flex justify-content-btween" src="./img/icon_global.svg" alt="">
+                        <p class="d-none d-lg-block">&nbsp;台北&nbsp;&nbsp;</p>
+                        <i class="fas fa-sort-down pl-2 d-md-flex justify-content-btween d-none d-lg-block"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-center d-flex align-items-center">
+                <a href="#"><img src="./img/logo.svg" alt=""></a>
+            </div>
+            <div class="nav-right">
+                <span class="search a-c-f-td pr-2 d-none d-lg-block">聆聽寂靜 - 邂逅陽...&nbsp;&nbsp;<i
+                        class="fas fa-search"></i>&nbsp;</span>
+                <i class="i-md fas fa-search d-lg-none d-md-block"></i>
+                <!-- 這個<i>是只有螢幕大小是Medium時才會顯示 -->
+                <a class="button a-c-f-td pr-2 pl-3 d-none  d-lg-block" href=" #">登入</a>
+                <a class="button a-c-f-td pr-2 d-none d-lg-block" href=" #">註冊</a>
+                <a class="button-held a-c-f-td d-none d-lg-block" href=" #">辦活動</a>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <nav class="navsec">
+        <div class="container">
+            <div class="row flex-nowrap">
+                <a class="links d-none d-lg-block" href="">
+                    <div class="link-choice d-none d-lg-block">
+                        <img src="./img/link_choice_wb.png" alt="">精選
+                    </div>
+                </a>
+                <a class="links d-none d-lg-block" href="">
+                    <div class="link-study d-none d-lg-block">
+                        <img src="./img/link_study_wb.png" alt="">學習
+                    </div>
+                </a>
+                <a class="links d-none d-lg-block" href="">
+                    <div class="link-art d-none d-lg-block">
+                        <img src="./img/link_art_wb.png" alt="">藝文
+                    </div>
+                </a>
+                <a class="links d-none d-lg-block" href="">
+                    <div class="link-experience d-none d-lg-block">
+                        <img src="./img/link_experience_wb.png" alt="">體驗
+                    </div>
+                </a>
+            </div>
+            <div class="navsec-sm d-flex d-lg-none justify-content-between" style="line-height: 65px;">
+                <a class="choice" href=""> 
+                    <div class="linkss" style="border-bottom: 5px solid #0088d2; text-align: center;"><img src="./img/link_choice_wb.png" style="width: 20%;" alt="">精選</div>
+                </a>
+                <a href="">
+                    <div class="linkss" style="text-align: center;"><img src="./img/link_study_wb.png" style="width: 20%;" alt="">學習</div>
+                </a>
+                <a href="">
+                    <div class="linkss" style="text-align: center;"><img src="./img/link_art_wb.png" style="width: 20%;" alt="">藝文</div>
+                </a>
+                <a href="">
+                    <div class="linkss" style="text-align: center;"><img src="./img/link_experience_wb.png" style="width: 20%;" alt="">體驗</div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick-1.8.1/slick-1.8.1/slick/slick.min.js"></script>
+
+
+</body>
+
+</html>
